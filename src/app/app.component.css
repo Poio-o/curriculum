@@ -1,0 +1,29 @@
+.main{
+    background-color: blanchedalmond;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+aside {
+    background-color: wheat;
+    width: 25%;
+}
+
+footer {
+    background-color: firebrick;
+}
+
+main {
+    background-color: green;
+    flex: 1;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+}
+
+/*https://coolors.co/palette/000814-001d3d-003566-ffc300-ffd60a*/
