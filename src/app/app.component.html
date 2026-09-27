@@ -1,68 +1,145 @@
 <div class="main">
   <aside>
-    <div class="presentacion">
-      <h1>{{nombre}}</h1>
-      <h4>{{puesto}} </h4>
+    <div class="perfil">
+      <div class="foto-perfil">
+        <img ngSrc="img/cara.jpeg" width="120" height="120" priority alt="Foto de perfil">
+      </div>
+      <div class="presentacion">
+        <h1>{{nombre}}</h1>
+        <h4>{{puesto}}</h4>
+      </div>
     </div>
 
-    <h2>Sobre mí</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique molestias officiis iusto, facilis cum
-      reprehenderit placeat excepturi. Numquam excepturi a vitae harum? Beatae enim eius dicta sint, ex inventore non
-      ipsa qui. Obcaecati.</p>
+    <section class="seccion-aside">
+      <h2>SOBRE MÍ</h2>
+      <p>Desarrollador de Aplicaciones Multiplataforma con experiencia en desarrollo web, investigación en IA y
+        resolución de incidencias. <br><br>
+        Nuevo, pero con ganas de aprender.</p>
+    </section>
 
-    <h2>Contacto</h2>
-    <p>{{ciudad}}</p>
-    <p>{{telefono}}</p>
-    <p>{{['correo electronico']}} </p>
-    <p>{{github}} </p>
+    <section class="seccion-aside">
+      <h2>CONTACTO</h2>
+      <div class="contacto-lista">
+        <div class="contacto-item">
+          <span class="contacto-label">UBICACIÓN</span>
+          <span>{{ciudad}}</span>
+        </div>
+        <div class="contacto-item">
+          <span class="contacto-label">TELÉFONO</span>
+          <a [href]="'tel:' + telefono">{{telefono}}</a>
+        </div>
+        <div class="contacto-item">
+          <span class="contacto-label">EMAIL</span>
+          <a [href]="'mailto:' + correo">{{ correo }}</a>
+        </div>
+        <div class="contacto-item">
+          <span class="contacto-label">GITHUB</span>
+          <a [href]="github" target="_blank">github.com/Poio-o</a>
+        </div>
+      </div>
+    </section>
 
-    <h2>Idiomas</h2>
-    <p>{{idiomas.at(0)}} </p>
-    <p>{{idiomas.at(1)}} </p>
-    <p>{{idiomas.at(2)}} </p>
+    <section class="seccion-aside">
+      <h2>IDIOMAS</h2>
+      <div class="tags-lista">
+        <span class="tag">{{idiomas[0]}}</span>
+        <span class="tag">{{idiomas[1]}}</span>
+        <span class="tag">{{idiomas[2]}}</span>
+      </div>
+    </section>
 
-    <h2>Cualidades</h2>
-    <p></p>
-    <p></p>
-    <p></p>
+    <section class="seccion-aside">
+      <h2>CUALIDADES</h2>
+      <div class="tags-lista">
+        <span class="tag-secundario">{{cualidades[0]}}</span>
+        <span class="tag-secundario">{{cualidades[1]}}</span>
+        <span class="tag-secundario">{{cualidades[2]}}</span>
+      </div>
+    </section>
   </aside>
+
   <main>
+    <section class="seccion-principal">
+      <h2>EXPERIENCIA</h2>
+      <div class="cards-lista">
+        <div class="card-item">
+          <div class="card-header">
+            <div class="logo-box">
+              <img src="img/baart.png" alt="Logo Business as an Art">
+            </div>
+            <div class="card-titulos">
+              <div class="card-titulo-fila">
+                <h3>Business as an Art</h3>
+                <span class="badge-tiempo">3 meses</span>
+              </div>
+              <p class="resumen">Investigación de IA y Diseño de páginas web</p>
+            </div>
+          </div>
+        </div>
 
-    <h2>Experiencia</h2>
-    <div>
-      <h3>Business as an Art</h3>
-      <!-- Imagen -->
-      <p class="tiempo">3 meses</p>
-      <p class="resumen">Investigación de IA y Diseño de páginas web</p>
-    </div>
+        <div class="card-item">
+          <div class="card-header">
+            <div class="logo-box">
+              <img src="img/ldquantum.webp" alt="Logo LDQuantum">
+            </div>
+            <div class="card-titulos">
+              <div class="card-titulo-fila">
+                <h3>LDQuantum</h3>
+                <span class="badge-tiempo">3 meses</span>
+              </div>
+              <p class="resumen">Gestión de errores y Diseño de páginas web</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div>
-      <h3>LDQuantum</h3>
-      <!-- Imagen -->
-      <p class="tiempo">3 meses</p>
-      <p class="resumen">Gestión de errores y Diseño de páginas web</p>
-    </div>
+    <section class="seccion-principal">
+      <h2>FORMACIÓN</h2>
+      <div class="cards-lista">
+        <div class="card-item">
+          <div class="card-header">
+            <div class="logo-box">
+              <img src="img/alanturing.jpeg" alt="Logo Alan Turing">
+            </div>
+            <div class="card-titulos">
+              <div class="card-titulo-fila">
+                <h3>Sistemas Microinformáticos y Redes</h3>
+                <span class="badge-tiempo">2 años</span>
+              </div>
+              <p class="lugar">CPIFP Alan Turing</p>
+            </div>
+          </div>
+        </div>
 
-    <h2>Formación</h2>
-    <h3>Sistemas Microinformáticos y Redes</h3>
-    <p class="lugar">CPIFP Alan Turing</p>
-    <p class="tiempo">2 años</p>
+        <div class="card-item">
+          <div class="card-header">
+            <div class="logo-box">
+              <img src="img/alanturing.jpeg" alt="Logo Alan Turing">
+            </div>
+            <div class="card-titulos">
+              <div class="card-titulo-fila">
+                <h3>Desarrollo de Aplicaciones Multiplataforma</h3>
+                <span class="badge-tiempo">2 años</span>
+              </div>
+              <p class="lugar">CPIFP Alan Turing</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <h3>Desarrollo de Aplicaciones Multiplataforma</h3>
-    <p class="lugar">CPIFP Alan Turing</p>
-    <p class="tiempo">2 años</p>
-
-    <h2>Tecnologías</h2>
-    <ul>
-      <li>HTML5</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>TypeScript</li>
-      <li>Angular</li>
-      <li>SQL</li>
-    </ul>
+    <section class="seccion-principal">
+      <h2>TECNOLOGÍAS</h2>
+      <ul class="tecnologias-grid">
+        @for (tecnologia of tecnologias; track tecnologia) {
+          <li>{{ tecnologia }}</li>
+        }
+      </ul>
+    </section>
   </main>
 </div>
+
 <footer>
-  <p>Currículum desarrollado con Angular</p>
+  <p>{{ textoPie }} - {{ fecha | date:'dd/MM/yyyy' }}</p>
 </footer>
